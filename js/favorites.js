@@ -9,20 +9,8 @@ export class Favorites {
   }
 
   load(){
-    this.entries = [
-      {
-        login: "AlannaaSilva",
-        name: "Alanna Silva",
-        public_repos: "15",
-        followers: "20",
-      },
-      {
-        login: "maykbrito",
-        name: "Mayk Brito",
-        public_repos: "20",
-        followers: "100",
-      },
-    ];
+    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
+    
      
   }
 
